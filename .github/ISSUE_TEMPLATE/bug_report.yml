@@ -1,0 +1,50 @@
+name: "Сообщить об ошибке"
+description: "Проблема с работой Гермеса"
+title: "[Ошибка] "
+labels: ["ошибка"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение. Не прикрепляйте реальные списки студентов, персональные данные, пароли или конфиденциальные документы.
+  - type: input
+    id: version
+    attributes:
+      label: Версия приложения
+      placeholder: "2.0.0-alpha.10"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Где возникла ошибка?
+      options:
+        - Установка и обновление
+        - Импорт списка
+        - Формирование DOCX
+        - Формирование PDF
+        - Настройка периода
+        - Интерфейс
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести проблему?
+      description: Используйте только вымышленные данные.
+      placeholder: "1. Открыть программу...\n2. Выбрать...\n3. Нажать..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое и фактическое поведение
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Дополнительные сведения (без персональных данных)
+    validations:
+      required: false
