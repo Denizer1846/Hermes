@@ -1,0 +1,35 @@
+name: "Предложить улучшение"
+description: "Идея по удобству работы с Гермесом"
+title: "[Предложение] "
+labels: ["предложение"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Эта форма предназначена для пожеланий пользователей, а не для отправки изменений в исходный код.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую задачу хочется решить?
+      description: Расскажите о неудобстве или повторяющихся действиях.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Какое улучшение предлагаете?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Раздел программы
+      options:
+        - Списки студентов
+        - Шаблоны документов
+        - Период и даты
+        - DOCX и PDF
+        - Установка
+        - Другое
+    validations:
+      required: true
